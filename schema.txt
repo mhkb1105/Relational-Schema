@@ -1,0 +1,98 @@
+CREATE TABLE Studio
+(
+  studioName varchar(20) NOT NULL,
+  studioWebsite varchar(20) NOT NULL,
+  address varchar(20) NOT NULL,
+  PRIMARY KEY (studioName, studioWebsite)
+);
+
+CREATE TABLE Series
+(
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  start_date varchar(20) NOT NULL,
+  end_date varchar(20) NOT NULL,
+  website varchar(20) NOT NULL,
+  studioName varchar(20) NOT NULL,
+  studioWebsite varchar(20) NOT NULL,
+  PRIMARY KEY (seriesName, creator),
+  FOREIGN KEY (studioName, studioWebsite) REFERENCES Studio
+);
+
+CREATE TABLE Actor
+(
+  actorName varchar(20) NOT NULL,
+  actorWebsite varchar(40) NOT NULL,
+  PRIMARY KEY (actorName)
+);
+
+CREATE TABLE Character
+(
+  charName varchar(20) NOT NULL,
+  role varchar(20) NOT NULL,
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  PRIMARY KEY (charName, seriesName, creator),
+  FOREIGN KEY (seriesName, creator) REFERENCES Series
+);
+
+CREATE TABLE Season
+(
+  seasonNum INT NOT NULL,
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  PRIMARY KEY (seasonNum, seriesName, creator),
+  FOREIGN KEY (seriesName, creator) REFERENCES Series
+);
+
+CREATE TABLE Portrayal
+(
+  actorName varchar(20) NOT NULL,
+  charName varchar(20) NOT NULL,
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  PRIMARY KEY (actorName, charName, seriesName, creator),
+  FOREIGN KEY (actorName) REFERENCES Actor,
+  FOREIGN KEY (charName, seriesName, creator) REFERENCES Character
+);
+
+CREATE TABLE Episode
+(
+  title varchar(20) NOT NULL,
+  air_date varchar(20) NOT NULL,
+  URL varchar(20) NOT NULL,
+  description varchar(90) NOT NULL,
+  quality_rating INT NOT NULL,
+  seasonNum INT NOT NULL,
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  PRIMARY KEY (title, seasonNum, seriesName, creator),
+  FOREIGN KEY (seasonNum, seriesName, creator) REFERENCES Season
+);
+
+CREATE TABLE Stars
+(
+  Salary varchar(20) NOT NULL,
+  actorName varchar(20) NOT NULL,
+  seasonNum INT NOT NULL,
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  PRIMARY KEY (actorName, seasonNum, seriesName, creator),
+  FOREIGN KEY (actorName) REFERENCES Actor,
+  FOREIGN KEY (seasonNum, seriesName, creator) REFERENCES Season
+);
+
+
+CREATE TABLE Features
+(
+  actorName varchar(20) NOT NULL,
+  charName varchar(20) NOT NULL,
+  seriesName varchar(20) NOT NULL,
+  creator varchar(20) NOT NULL,
+  title varchar(20) NOT NULL,
+  seasonNum INT NOT NULL,
+  PRIMARY KEY (actorName, charName, creator, title, seasonNum, seriesName),
+  FOREIGN KEY (actorName, charName, seriesName, creator) REFERENCES Portrayal,
+  FOREIGN KEY (title, seasonNum, seriesName, creator) REFERENCES Episode,
+  FOREIGN KEY (actorName, seasonNum, seriesName, creator) REFERENCES Stars
+);

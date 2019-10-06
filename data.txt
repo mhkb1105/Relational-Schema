@@ -1,0 +1,139 @@
+insert into Studio (studioName, studioWebsite, address) values 
+('Frumpy, Inc.', 'FrumpyDumpy.com', 'Toronto, ON'),
+('YaYa Productions', 'YaYaPro.ca', 'St Catherines, ON');
+
+insert into Series (seriesName, creator, start_date, end_date, website, studioName, studioWebsite) values
+('Fronds', 'Danny Krane', '05/29/2016', 'Still Running', 'fronds.tv', 'Frumpy, Inc.', 'FrumpyDumpy.com'),
+('Fronds', 'Jenni Cohen', '04/20/2016', 'Still Running', 'fronds.com', 'YaYa Productions', 'YaYaPro.ca'),
+('Me, Myself, and I', 'Spike Jonze', '08/31/2015', '06/05/2017', 'meeee.me', 'Frumpy, Inc.', 'FrumpyDumpy.com');
+
+insert into Actor (actorName, actorWebsite) values
+('Allie Grant', 'aaagrant.tv'),
+('Britt Robertson', 'BrittRob.com'),
+('Jennifer Lawrence', 'jl.tv'),
+('Justin Kirk', 'itsybtsy.ca/3jx82289'),
+('John Malkovich', 'malkovich2.com'),
+('Josh Hutcherson', 'meenyurl.ca/UUjh2398'),
+('Mary-Louise Parker', 'mlparker.org'),
+('Mindy Kaling', 'itsybtsy.ca/hh21129s'),
+('Richard Ayoade', 'ayoade.com');
+
+insert into Character (charName, role, seriesName, creator) values
+('Cameron', 'sardonic friend', 'Fronds', 'Danny Krane'),
+('Moss', 'geeky friend', 'Fronds', 'Danny Krane'),
+('Paige', 'whimsical friend', 'Fronds', 'Danny Krane'),
+('Veronica', 'staid friend', 'Fronds', 'Danny Krane'),
+('Andi', 'the pusher', 'Fronds', 'Jenni Cohen'),
+('Issy', 'the user', 'Fronds', 'Jenni Cohen'),
+('Ned', 'the enabler', 'Fronds', 'Jenni Cohen'),
+('Shane', 'the outsider', 'Fronds', 'Jenni Cohen'),
+('John', 'the one', 'Me, Myself, and I', 'Spike Jonze');
+
+insert into Season (seasonNum, seriesName, creator) values
+(1, 'Fronds', 'Danny Krane'),
+(2, 'Fronds', 'Danny Krane'),
+(1, 'Fronds', 'Jeni Cohen'),
+(2, 'Fronds', 'Jeni Cohen'),
+(1, 'Me, Myself, and I', 'Spike Jonze'),
+(2, 'Me, Myself, and I', 'Spike Jonze');
+
+insert into Portrayal (actorName, charName, seriesName, creator) values
+('Allie Grant', 'Veronica', 'Fronds', 'Danny Krane'),
+('Britt Robertson', 'Veronica', 'Fronds', 'Danny Krane'),
+('Mindy Kaling', 'Paige', 'Fronds', 'Danny Krane'),
+('Jennifer Lawrence', 'Veronica', 'Fronds', 'Danny Krane'),
+('Josh Hutcherson', 'Cameron', 'Fronds', 'Danny Krane'),
+('Richard Ayoade', 'Moss', 'Fronds', 'Danny Krane'),
+('Allie Grant', 'Issy', 'Fronds', 'Jenni Cohen'),
+('Justin Kirk', 'Ned', 'Fronds', 'Jenni Cohen'),
+('Justin Kirk', 'Shane', 'Fronds', 'Jenni Cohen'),
+('Mary-Louise Parker', 'Andi', 'Fronds', 'Jenni Cohen'),
+('John Malkovich', ' John', 'Me, Myself, and I', 'Spike Jonze');
+
+insert into Episode (title, air_date, URL, description, quality_rating, seasonNum, seriesName, creator) values
+('Hooking up', '09/09/2016', 'fronds.tv/01/01', 'Botany is never monotony!', 5, 1, 'Fronds', 'Danny Krane'),
+('Yikes, spikes!', '09/16/2016', 'fronds.tv/01/02', 'Veronica pranks the others with a spiky plant.', 2, 1, 'Fronds', 'Danny Krane'),
+('The Lazy Amazon', '09/23/2016', 'fronds.tv/01/03', 'Stuck on a raft with no paddles', 4, 1, 'Fronds', 'Danny Krane'),
+('Tangerine Skies', '09/08/2017', 'fronds.tv/02/01', 'Paige decides to live in the canopy and will not come down!', 4, 2, 'Fronds', 'Danny Krane'),
+('Cameron Blues', '09/15/2017', 'fronds.tv/02/02', 'Cameron starts to self-medicate with new plants he discovers.', 5, 2, 'Fronds', 'Danny Krane'),
+('The Lima Weekend', '09/22/2017', 'fronds.tv/02/03', 'Hijinks ensue when Moss and Paige go to Lima for a weekend away.', 1, 2, 'Fronds', 'Danny Krane'),
+('Prohibition', '09/16/2016', 'fronds.com/Prohib', 'Canada outlaws caffeine and alcohol the same day they legalize weed.', 4, 1, 'Fronds', 'Jenni Cohen'),
+('Higher and Higher', '09/23/2016', 'fronds.com/Higher', 'The economy stumbles with no one getting up before noon.', 3, 1, 'Fronds', 'Jenni Cohen'),
+('The Munchies', '09/30/2016', 'fronds.com/Munch', 'The food industry skyrockets.', 5, 1, 'Fronds', 'Jenni Cohen'),
+('Inhaling', '09/15/2017', 'fronds.com/Inhale', 'Society begins to adjust to the haze, takes it in stride.', 3, 2, 'Fronds', 'Jenni Cohen'),
+('All good', '09/22/2017', 'fronds.com/Budget', 'Healthcare costs plummet, tax revenues soar.', 5, 2, 'Fronds', 'Jenni Cohen'),
+('Toke Bespoke', '09/29/2017', 'fronds.com/Toke', 'Andi and Ned get hitched, and the reception lasts for days.', 5, 2, 'Fronds', 'Jenni Cohen'),
+('Alone', '10/09/2015', 'meeee.me/Alone', 'John cannot find himself.', 4, 1, 'Me, Myself, and I', 'Spike Jonze'),
+('Together', '10/16/2015', 'meeee.me/Together', 'John finds more of himself than he could ever imagine!', 5, 1, 'Me, Myself, and I', 'Spike Jonze'),
+('The Solipsist', '10/07/2016', 'meeee.me/Solipsist', 'John starts his own universe.', 5, 1, 'Me, Myself, and I', 'Spike Jonze'),
+('Tea Time', '10/07/2016', 'meeee.me/Tea', 'John hosts a tea party and only he shows up.', 1, 2, 'Me, Myself, and I', 'Spike Jonze'),
+('Au Revoir', '04/28/2017', 'meeee.me/Revior', 'John sees himself off.', 5, 2, 'Me, Myself, and I', 'Spike Jonze');
+
+insert into Stars (Salary, actorName, SeasonNum, seriesName, creator) values
+('$250,000', 'Jennifer Lawrence', 1, 'Fronds', 'Danny Krane'),
+('$150,000', 'Josh Hutcherson', 1, 'Fronds', 'Danny Krane'),
+('$200,000', 'Mindy Kaling', 1, 'Fronds', 'Danny Krane'),
+('$75,000', 'Richard Ayoade', 1, 'Fronds', 'Danny Krane'),
+('$175,000', 'Allie Grant', 2, 'Fronds', 'Danny Krane'),
+('$200,000', 'Britt Robertson', 2, 'Fronds', 'Danny Krane'),
+('$350,000', 'Mindy Kaling', 2, 'Fronds', 'Danny Krane'),
+('$150,000', 'Josh Hutcherson', 2, 'Fronds', 'Danny Krane'),
+('$225,000', 'Richard Ayoade', 2, 'Fronds', 'Danny Krane'),
+('$150,000', 'Allie Grant', 1, 'Fronds', 'Jenni Cohen'),
+('$275,000', 'Justin Kirk', 1, 'Fronds', 'Jenni Cohen'),
+('$275,000', 'Mary-Louise Parker', 1, 'Fronds', 'Jenni Cohen'),
+('$100,000', 'Allie Grant', 1, 'Fronds', 'Jenni Cohen'),
+('$325,000', 'Justin Kirk', 1, 'Fronds', 'Jenni Cohen'),
+('$325,000', 'Mary-Louise Parker', 2, 'Fronds', 'Jenni Cohen'),
+('$99,000', 'John Malkovich', 1, 'Me, Myself, and I', 'Spike Jonze'),
+('$249,000', 'John Malkovich', 2, 'Me, Myself, and I', 'Spike Jonze');
+
+
+insert into Features (actorName, charName, seriesName, creator, title, seasonNum) values
+('Jennifer Lawrence', 'Veronica', 'Fronds', 'Danny Krane', 'Hooking up', 1),
+('Josh Hutcherson', 'Cameron', 'Fronds', 'Danny Krane', 'Hooking up', 1),
+('Mindy Kaling', 'Paige', 'Fronds', 'Danny Krane', 'Hooking up', 1),
+('Richard Ayoade', 'Moss', 'Fronds', 'Danny Krane', 'Hooking up', 1),
+('Jennifer Lawrence', 'Veronica', 'Fronds', 'Danny Krane', 'Yikes, spikes!', 1),
+('Josh Hutcherson', 'Cameron', 'Fronds', 'Danny Krane', 'Yikes, spikes!', 1),
+('Mindy Kaling', 'Paige', 'Fronds', 'Danny Krane', 'Yikes, spikes!', 1),
+('Richard Ayoade', 'Moss', 'Fronds', 'Danny Krane', 'Yikes, spikes!', 1),
+('Jennifer Lawrence', 'Veronica', 'Fronds', 'Danny Krane', 'The Lazy Amazon', 1),
+('Josh Hutcherson', 'Cameron', 'Fronds', 'Danny Krane', 'The Lazy Amazon', 1),
+('Mindy Kaling', 'Paige', 'Fronds', 'Danny Krane', 'The Lazy Amazon', 1),
+('Allie Grant', 'Veronica', 'Fronds', 'Danny Krane', 'Tangerine Skies', 2),
+('Britt Robertson', 'Veronica', 'Fronds', 'Danny Krane', 'Tangerine Skies', 2),
+('Josh Hutcherson', 'Cameron', 'Fronds', 'Danny Krane', 'Tangerine Skies', 2),
+('Mindy Kaling', 'Paige', 'Fronds', 'Danny Krane', 'Tangerine Skies', 2),
+('Richard Ayoade', 'Moss', 'Fronds', 'Danny Krane', 'Tangerine Skies', 2),
+('Josh Hutcherson', 'Cameron', 'Fronds', 'Danny Krane', 'Cameron Blues', 2),
+('Mindy Kaling', 'Paige', 'Fronds', 'Danny Krane', 'The Lima Weekend', 2),
+('Richard Ayoade', 'Moss', 'Fronds', 'Danny Krane', 'The Lima Weekend', 2),
+('Allie Grant', 'Issy', 'Fronds', 'Jenni Cohen', 'Prohibition', 1),
+('Justin Kirk', 'Ned', 'Fronds', 'Jenni Cohen', 'Prohibition', 1),
+('Mary-Louise Parker', 'Andi', 'Fronds', 'Jenni Cohen', 'Prohibition', 1),
+('Justin Kirk', 'Ned', 'Fronds', 'Jenni Cohen', 'Higher and Higher', 1),
+('Mary-Louise Parker', 'Andi', 'Fronds', 'Jenni Cohen', 'Higher and Higher', 1),
+('Allie Grant', 'Issy', 'Fronds', 'Jenni Cohen', 'The Munchies', 1),
+('Justin Kirk', 'Ned', 'Fronds', 'Jenni Cohen', 'The Munchies', 1),
+('Mary-Louise Parker', 'Andi', 'Fronds', 'Jenni Cohen', 'The Munchies', 1),
+('Allie Grant', 'Issy', 'Fronds', 'Jenni Cohen', 'Inhaling', 2),
+('Justin Kirk', 'Ned', 'Fronds', 'Jenni Cohen', 'Inhaling', 2),
+('Allie Grant', 'Issy', 'Fronds', 'Jenni Cohen', 'All good', 2),
+('Justin Kirk', 'Ned', 'Fronds', 'Jenni Cohen', 'All good', 2),
+('Justin Kirk', 'Shane', 'Fronds', 'Jenni Cohen', 'All good', 2),
+('Mary-Louise Parker', 'Andi','Fronds', 'Jenni Cohen', 'All good', 2),
+('Allie Grant', 'Issy','Fronds', 'Jenni Cohen', 'Toke Bespoke', 2),
+('Justin Kirk', 'Ned','Fronds', 'Jenni Cohen', 'Toke Bespoke', 2),
+('Mary-Louise Parker', 'Andi', 'Fronds', 'Jenni Cohen', 'Toke Bespoke', 2),
+('John Malkovich', 'John', 'Me, Myself, and I', 'Spike Jonze', 'Alone', 1),
+('John Malkovich', 'John', 'Me, Myself, and I', 'Spike Jonze', 'Together', 1),
+('John Malkovich', 'John', 'Me, Myself, and I', 'Spike Jonze', 'The Solipsist', 2),
+('John Malkovich', 'John', 'Me, Myself, and I', 'Spike Jonze', 'Tea Time', 2),
+('John Malkovich', 'John', 'Me, Myself, and I', 'Spike Jonze', 'Au Revoir', 2);
+
+
+
+
+
+

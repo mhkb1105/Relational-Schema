@@ -1,0 +1,9 @@
+SELECT   Features.title, air_date, Features.actor_name, Features.character_name, role, salary
+    FROM      Features, Episode, Character, Stars
+    WHERE     quality_rating >= '4'
+          AND    Features.title = Episode.title
+          AND    Features.actor_name = Stars.actor_name
+          AND    Features.season_num = Stars.season_num
+          AND    Features.character_name = Character.character_name
+          AND    Features.creator = Stars.creator
+    ORDER BY  air_date, Features.title, Features.actor_name, Features.character_name;
